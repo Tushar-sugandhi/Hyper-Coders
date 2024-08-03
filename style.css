@@ -1,31 +1,63 @@
-
+/* CSS CONTENTS */
+/* 
+1. Nav bar
+2. About 
+3.
+4.
+5. Froms
+6. Footer
+*/
 /* nav bar CSS */
 #navbar{
     font-family: cursive;
 }
 
+
 /* about CSS */
-#about-head{
-    color: #ffea01;
-    background-color: #3498db;
+#about-head {
+  color: #ffea01;
+  background-color: #3498db;
+  padding: 10px;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Noto Color Emoji";
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-#about{
-    padding: 25px 40px 10px 40px;
-    box-shadow: 10px 10px 10px rgba(0.5, 1, 2, 2);
-    font-size: 40px;
-    font-weight: 600; 
-  }
-  #card-body{
-    max-width: 50%;
-    text-align: left;
-    padding: 30px 0 0 0;
-    display: flex;
-    margin: 32px 0;
-    display: inline;
-    background: -webkit-linear-gradient(right, #7cf305, #830606);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+#about {
+  padding: 25px 40px 10px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 40px;
+  font-weight: 600;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 20px;
+}
+#card-body {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  text-align: left;
+  padding: 30px 0 0 0;
+  margin: 32px 0;
+}
+.text-content {
+  flex: 1;
+  background: -webkit-linear-gradient(right, #7cf305, #830606);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.image-content {
+  flex: 0 0 auto;
+  margin-left: 20px;
+}
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
 
 
 
