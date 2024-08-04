@@ -67,16 +67,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 .open-button {
-  background-color: #555;
+  background-color: #433aca;
   color: white;
   padding: 16px 20px;
   border: none;
+  opacity: 70%;
   cursor: pointer;
-  opacity: 0.8;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 140px;
+  bottom: 20px;
+  right: 20px;
+  width: 65px;
   z-index: 1;
   border-radius: 70%;
   border:2px solid black;
