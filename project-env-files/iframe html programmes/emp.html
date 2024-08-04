@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chatbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .chat-container {
+            width: 400px;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+        }
+        .message-box {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .message {
+            margin-bottom: 10px;
+        }
+        .employee1 {
+            text-align: right;
+            color: #007bff;
+        }
+        .employee2 {
+            text-align: left;
+            color: #28a745;
+        }
+        .input-container {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+        .input-container input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            border-radius: 0;
+            outline: none;
+        }
+        .input-container button {
+            border: none;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 0;
+            cursor: pointer;
+        }
+        .input-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="message-box" id="messageBox">
+            <!-- Messages will be appended here -->
+	    <div class="message employee2">Hey Tushar! Today we have meet @ 7 a.m</div>
+	    <div class="message employee1">Nice! I will be on time.</div>
+	    <div class="message employee1">Have you Informed Vikas to attend the meet?</div>
+	    <div class="message employee2">Yes I have. I've also informed Aneesh to join us...</div>
+	    <div class="message employee1">Great!</div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const messageBox = document.getElementById('messageBox');
+        const messageInput = document.getElementById('messageInput');
+
+        function sendMessage() {
+            const messageText = messageInput.value.trim();
+            if (messageText === '') return;
+
+            // Create a new message element
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            messageElement.classList.add('employee1'); // Change to 'employee2' for the other user
+            messageElement.textContent = messageText;
+
+            // Append message to the message box
+            messageBox.appendChild(messageElement);
+
+            // Clear input field
+            messageInput.value = '';
+
+            // Scroll to the bottom of the message box
+            messageBox.scrollTop = messageBox.scrollHeight;
+        }
+
+        // Optional: send a message on "Enter" key press
+        messageInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>

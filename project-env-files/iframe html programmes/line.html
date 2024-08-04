@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Line Graph</title>
+    <!-- Include Chart.js library from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            width: 80%;
+            margin: auto;
+        }
+        .input-container {
+            text-align: center;
+            margin: 20px;
+        }
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <label for="labels">Labels (comma-separated):</label>
+        <input type="text" id="labels" value="January,February,March,April,May,June,July">
+        <br>
+        <label for="data">Data (comma-separated):</label>
+        <input type="text" id="data" value="10,20,15,25,30,20,40">
+        <br>
+        <button onclick="updateChart()">Update Chart</button>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="myLineChart"></canvas>
+    </div>
+
+    <script>
+        // Initial data for the line chart
+        const initialLabels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+        const initialData = [10, 20, 15, 25, 30, 20, 40];
+
+        // Create the chart
+        const ctx = document.getElementById('myLineChart').getContext('2d');
+        let myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: initialLabels,
+                datasets: [{
+                    label: 'Monthly Sales',
+                    data: initialData,
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.dataset.label + ': ' + tooltipItem.raw;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Function to update the chart
+        function updateChart() {
+            // Get values from input fields
+            const labelsInput = document.getElementById('labels').value;
+            const dataInput = document.getElementById('data').value;
+            
+            // Process input values
+            const labels = labelsInput.split(',').map(label => label.trim());
+            const data = dataInput.split(',').map(value => parseFloat(value.trim()));
+
+            // Update chart data
+            myLineChart.data.labels = labels;
+            myLineChart.data.datasets[0].data = data;
+            myLineChart.update();
+        }
+    </script>
+</body>
+</html>
