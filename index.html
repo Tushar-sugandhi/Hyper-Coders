@@ -15,7 +15,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   </head>
   <body>
+  <!-- pop up bar initialization. check css. for styles tab---------------------------------------------->
+  <button class="open-button" onclick="openForm()">Message Us!</button>
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat Box</h1>
 
+    <textarea placeholder="Hello! Please type your message..." name="msg" required></textarea>
+
+    <button type="submit" class="btn" onclick="sentNotifyUser()">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function sentNotifyUser(){
+alert("Your message has been sent! We will review your plea shortly.");
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
     <!-- Navbar---------------------------------------------------------------------- -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar"> <!-- make the nav bar size, nav bar font color, navbar background color-->
         <a class="navbar-brand" href=#""><img src="images/analysis(1).png" style="width: 33%;" style="padding-right: 25px;">Data Vision</a>
