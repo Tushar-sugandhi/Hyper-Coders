@@ -1,8 +1,10 @@
-Hyper Coders 🚀
+# Hyper Coders 🚀
+<img src="https://img.shields.io/badge/License_-Creative Commons v1.0%20License-blue"> <img src="https://img.shields.io/badge/Script_-html & css-green">
 
 Welcome to Hyper Coders 🎉
 
 Hyper Coders is an innovative platform designed to simplify project management and enhance data visualization. Whether you’re managing complex projects or organizing daily tasks, our tools will help you work more efficiently and collaborate effortlessly.
+
 🌟 Features
 
     Dynamic Data Visualization 📊
