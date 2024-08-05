@@ -1,0 +1,48 @@
+<!-- Page Format
+* Head
+* Body
+ 1.Nav Bar (HTML)
+ 2.Two graphs and chat section (redirected through iframe)
+ 3.Discription(HTML)
+ 4.Tasks and Timeline
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link rel="icon"  type="png" href="bar-chart.png">
+    <link rel="stylesheet" href="view-project.css">
+</head>
+<body>
+    <!-- previous button -->
+    <div style="margin: 20px; margin-bottom: 0%;">
+        <a href="index.html" class="previous">&laquo; Previous</a>
+    </div>
+    <!-- 2 graphs and chat section -->
+    <div class="iframe-container">
+        <iframe src="iframe html programmes/pie-chart.html" class="iframe shadow-effect" title="pie chart."></iframe>
+        <iframe src="iframe html programmes/line.html" class="iframe shadow-effect" title="line graph"></iframe>
+        <iframe src="iframe html programmes/emp.html " class="iframe shadow-effect" title="internal comms."></iframe>
+    </div>
+    
+    <div style="padding: 20px; overflow: hidden;" class="container">
+        <!-- discription -->
+        <div class="card-c" style="border: 2px solid #ccc; padding: 2%; width: 48%; display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1); vertical-align: top; margin-right: 4%;">
+            <h5 style="margin-top: 0; color: #2c3e50;">Description of the project</h5>
+            <b>
+                <h3 style="margin-top: 0; color: #2c3e50; font-size: 1.5em;">The Green Horizon Project: Revolutionizing Steel Production</h3>
+                <p style="margin: 0 0 10px 0; color: #5d4a0f; font-size: 1em;">&emsp;      The Green Horizon project represents a transformative leap in the steel industry, focusing on sustainability and innovation. Located in the Midwest, this initiative aims to build a modern steel plant utilizing advanced electric arc furnace (EAF) technology. Unlike traditional blast furnaces, EAFs melt steel scrap using electricity, significantly reducing carbon emissions and energy consumption. This technology aligns with global efforts to combat climate change by decreasing the steel production industry’s reliance on fossil fuels and minimizing its environmental impact. By replacing the more carbon-intensive blast furnace method, the plant will set a new standard for cleaner steel manufacturing.</p>
+                <p style="margin: 0; color: #9a0b0b; font-size: 1em;">&emsp;      In addition to its commitment to reducing greenhouse gas emissions, the Green Horizon plant will incorporate renewable energy sources such as solar and wind power. This strategic move aims to make the facility largely self-sufficient in terms of energy, thus further lowering its carbon footprint. The integration of these renewable sources will not only contribute to the plant’s sustainability but also serve as a model for other industrial facilities seeking to transition towards greener energy solutions. The plant will also utilize advanced recycling technologies to process and repurpose waste materials, further enhancing its environmental credentials by minimizing waste and promoting a circular economy.</p>
+            </b>
+        </div>
+        <!-- tasks and timeline -->
+        <div class="card-c" style="border: 2px solid #ccc; padding: 2%; width: 48%; display: inline-block; vertical-align: top;">
+            <h5 style="margin-top: 0; color: #2c3e50;">Tasks and Timeline</h5>
+            <iframe src="iframe html programmes/to-do-timeline.html" class="timeline-iframe" title="Tasks and Timeline" style="width: 100%; height: 500px; border: none;"></iframe>
+        </div>        
+    </div>
+    
+</body>
+</html>

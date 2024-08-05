@@ -1,0 +1,112 @@
+/* css contants */
+/* 
+ 1.Body
+ 2.Nav Bar
+ 3.Iframe that is graph, etc
+ 4.Card design
+ 5.To make Responsive desing
+
+ */
+
+/* body css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* nav bar */
+a:hover {
+  background-color: #120af0;
+  color: black;
+}
+.previous {
+  background-color: #120af0;
+  color: black;
+  background-color: #8d91e7;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  background-opacity: 90%;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+/*  iframe that is graph, etc  */
+.iframe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.iframe {
+  border: 5px solid white;
+  border-radius: 5%;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  width: 450px;
+  height:450px;
+}
+/* card css */
+.card-c {
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  margin: 20px auto;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  overflow: hidden;
+}
+
+.timeline-iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .iframe-container {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .iframe-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .iframe {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      max-height: 450px;
+  }
+
+  .card-c {
+      height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .iframe-container {
+      padding: 10px;
+  }
+
+  .iframe {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      max-height: 450px;
+  }
+
+  .card-c {
+      height: 200px;
+  }
+}
