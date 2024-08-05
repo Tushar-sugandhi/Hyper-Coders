@@ -8,9 +8,8 @@
   4. About (HTML)
   5. Project details (HTML)
   6. Features of this project (HTML)
-  7. Creating a new project (HTML)
-  8. Footer (HTML)
-  9. External JS links Provided
+  7. Footer (HTML)
+  8. External JS links Provided
 -->
 <!doctype html>
 <html lang="en">
@@ -61,17 +60,17 @@ function closeForm() {
         <a class="navbar-brand" href=#""><img src="images/analysis(1).png" style="width: 33%;" style="padding-right: 25px;">Data Vision</a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item"> 
-                <a class="nav-link"href="">About Us</a>
+                <a class="nav-link"href="#about" style=" padding-right: 10px;"">About Us</a>
              </li>
-             <li class="nav-item"> 
-                <a class="nav-link"href="">Project</a>
+             <li class="nav-item" style="padding-right: 10px;""> 
+                <a class="nav-link"href="#project">Project</a>
              </li>
-             <li class="nav-item"> 
-                <a class="nav-link"href="">Completed Projects</a>
+             <li class="nav-item" style="padding-right: 10px;"> 
+                <a class="nav-link"href="#Contact">Contact</a>
              </li>
-             <li class="nav-item"> 
-                <a class="nav-link"href="">Contact</a>
-             </li>
+             <li class="nav-item" style="background-color: rgb(109, 109, 196); padding-right: 10px; border-radius: 5px;"> 
+              <a class="nav-link"href="login.html">login</a>
+           </li>
         </ul>
     </nav>
 
@@ -123,22 +122,26 @@ function closeForm() {
         <div id="card-body">
           <div class="text-content">
             <blockquote class="blockquote mb-0">
-              <p>The company specializes in providing data visualization for projects within smart cities. It offers tools to track and display real-time information on urban development, infrastructure, and public services. These visualizations help city planners, officials, and citizens monitor progress and make informed decisions to enhance city living.</p>
+              <p>&emsp;  Welcome to Hyper Coders, your go-to solution for seamless project management and insightful data visualization. Our platform is designed to streamline your workflow, boost productivity, and enhance team collaboration, making project management more efficient and effective.
+                <br>
+                &emsp;  At Hyper Coders, we understand the challenges of managing complex projects and the need for clear, actionable insights. That’s why we offer a robust suite of tools tailored to meet diverse needs. Our dynamic data visualization features allow you to transform raw data into easy-to-understand graphs and charts, helping you make informed decisions quickly.
+                <br>
+                &emsp;  Our task management system is designed for simplicity and efficiency. With just a few clicks, you can add, update, and track tasks, set deadlines, and assign responsibilities. This ensures that every team member stays organized and focused on their goals.</p>
             </blockquote>
           </div>
           <div class="image-content">
-            <img src="images/bar-chart(1).png" alt="" style="width: 250px;">
+            <img src="images/bar-chart(1).png" alt="">
           </div>
         </div>
     </div>
 
-        <!-- Creating a new project -->
-    <div class="card text-center">
+        <!-- Viewing a new project -->
+    <div class="card text-center" id="project">
       <div class="card-header"></div>
       <div class="card-body">
         <h5 class="card-title">Project Management Tool</h5>
         <p class="card-text">This tool helps streamline human resources and industrial management by automating tasks, improving data accuracy, and facilitating better decision-making. It enables efficient tracking of employee performance, simplifies recruitment processes, and enhances overall operational productivity.</p>
-        <a href="project-env-files/view-project.html" class="btn btn-primary">Check it out!</a>
+        <a href="view-project.html" class="btn btn-primary">Check it out!</a>
       </div>
       <div class="card-footer text-muted"></div>
     </div>
@@ -148,94 +151,87 @@ function closeForm() {
       <div class="card-header" id="about-head">
         <div class="font-sans">Features of Project</div>
       </div>
-<div class="ag-format-container">
-  <div class="ag-courses_box">
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg"></div>
-
-        <div class="ag-courses-item_title">
-         Worldclass Infra
-        </div>
-      </a>
-    </div>
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg"></div>
-
-        <div class="ag-courses-item_title">
-          Ease of Governance
-        </div>
-      </a>
-    </div>
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg"></div>
-
-        <div class="ag-courses-item_title">
-         Social Infra
-        </div>
-      </a>
-    </div>
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg"></div>
-
-        <div class="ag-courses-item_title">
-          Ease of Business
-        </div>
-      </a>
-    </div>
-      <div class="ag-courses_item">
-        <a href="#" class="ag-courses-item_link">
-          <div class="ag-courses-item_bg"></div>
-  
-          <div class="ag-courses-item_title">
-            Technology
+      <div class="ag-format-container">
+        <div class="ag-courses_box">
+          <div class="ag-courses_item" style="size: 50px;">
+            <a href="" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+              <div class="ag-courses-item_title">
+                Worldclass Infra
+              </div>
+            </a>
           </div>
-        </a>
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"> 
+              </div>
+              <div class="ag-courses-item_title">
+                Ease of Governance
+              </div>
+            </a>
+        </div>
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+              <div class="ag-courses-item_title">
+                Social Infra
+            </div>
+          </a>
+        </div>
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+            <div class="ag-courses-item_title">
+              Ease of Business
+            </div>
+          </a>
+        </div> 
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+            <div class="ag-courses-item_title">
+              Technology
+            </div>
+          </a>
+        </div>
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+            <div class="ag-courses-item_title">
+              Sustainability
+            </div>
+          </a>
+        </div>
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+            <div class="ag-courses-item_title">
+              Security
+            </div>
+          </a>
+        </div>
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+            <div class="ag-courses-item_title">
+              Internal Connectivity
+            </div>
+          </a>
+        </div>
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+            <div class="ag-courses-item_title">
+              Live tracking
+            </div>
+          </a>
+        </div>
+        </div>
+        </div>
       </div>
-      <div class="ag-courses_item">
-        <a href="#" class="ag-courses-item_link">
-          <div class="ag-courses-item_bg"></div>
-  
-          <div class="ag-courses-item_title">
-            Sustainability
-          </div>
-        </a>
-      </div>
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg"></div>
-
-        <div class="ag-courses-item_title">
-          Fast Track Approvals
-        </div>
-      </a>
-    </div>
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg">
-        </div>
-        <div class="ag-courses-item_title">
-         Security
-        </div>
-      </a>
-    </div>
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg"></div>
-
-        <div class="ag-courses-item_title">
-          Internal Connectivity
-        </div>
-      </a>
-    </div>
-</div>
-</div>
     
     <!-- footer code-------------------------------------------------------------------------------------------------------------------- -->
-    <footer class="new_footer_area bg_color">
+    <footer class="new_footer_area bg_color" id="Contact">
             <div class="new_footer_top">
                 <div class="container">
                     <div class="row">
