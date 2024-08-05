@@ -1,12 +1,35 @@
-# Hyper-Coders
-*Website Description:*
-Welcome to our cutting-edge project management and data visualization platform! Designed with efficiency and clarity in mind, our website combines powerful project tracking tools with intuitive data visualization features to help you manage and monitor your projects seamlessly.
+Hyper Coders 🚀
 
-*Key Features:*
+Welcome to Hyper Coders 🎉
 
-1. *Project Tracking:* Stay on top of your tasks and milestones with our comprehensive project tracking system. Easily create, assign, and monitor tasks to ensure your projects are progressing smoothly.
-2. *Data Visualization:* Visualize your project data with interactive graphs and charts. Our data visualization tools provide clear insights into your project’s progress, helping you make informed decisions.
-3. *Chat Box:* Enhance team collaboration with our integrated chat box. Communicate in real-time, share updates, and resolve issues promptly to keep your projects on track.
-4. *Create New Projects:* Start new projects effortlessly with our user-friendly interface. Customize project settings and track progress from inception to completion.
+Hyper Coders is an innovative platform designed to simplify project management and enhance data visualization. Whether you’re managing complex projects or organizing daily tasks, our tools will help you work more efficiently and collaborate effortlessly.
+🌟 Features
 
-Our platform is designed to cater to project managers, teams, and individuals looking to streamline their workflow and visualize their progress in an engaging and effective manner. Join us and take your project management to the next level!
+    Dynamic Data Visualization 📊
+    Transform raw data into insightful graphs and charts. Easily track performance, analyze trends, and make data-driven decisions.
+
+    Effortless Task Management ✅
+    Add, update, and delete tasks with ease. Organize your workload, set deadlines, and ensure nothing falls through the cracks.
+
+    Comprehensive Timeline Tracking 📅
+    Visualize your project’s milestones and deadlines. Stay on top of schedules and manage project phases effectively.
+
+    Real-Time Collaboration 💬
+    Integrated chatbox for seamless communication. Share updates, discuss details, and resolve issues directly within the platform.
+
+✨ Contributors
+
+A huge thank you to our amazing contributors who made this project possible:
+
+    Tushar Sugandhi - [GitHub Profile](https://github.com/tushar-sugandhi)  
+    Project Lead, Developer, Designer.
+
+    Aneesh Sai Praneeth - [GitHub Profile](https://github.com/4n33sh)  
+    Developer, Backend.
+
+    [Contributor 2’s Name] - GitHub Profile(https://github.com/Vikassbhat)  
+    Developer, Designer.
+
+## 📄 License
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/). You may copy, modify, and distribute this work, but not for commercial purposes.
