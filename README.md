@@ -1,4 +1,4 @@
-# Hyper Coders 🚀
+![view-project-gif](https://github.com/user-attachments/assets/6019570b-257a-4f52-910a-989316caec08)# Hyper Coders 🚀
 <img src="https://img.shields.io/badge/License_-Creative Commons v1.0%20License-blue"> <img src="https://img.shields.io/badge/Script_-html & css-green">
 
 Welcome to Hyper Coders 🎉
@@ -33,10 +33,12 @@ A huge thank you to our amazing contributors who made this project possible:
     Developer, Designer.
 
 ## Index Page
-![](https://github.com/Tushar-sugandhi/Hyper-Coders/tree/main/gifs/index-gif.gif)
+![index-gif](https://github.com/user-attachments/assets/941c5e87-0325-47ee-828d-8e0abd36376e)
+
 
 ## Project Page
-![](https://github.com/Tushar-sugandhi/Hyper-Coders/tree/main/gifs/view-project-gif.gif)
+![view-project-gif](https://github.com/user-attachments/assets/28ec5bac-54e6-40ab-b5a8-357ffc4cfede)
+
 
 ## 📄 License
 
