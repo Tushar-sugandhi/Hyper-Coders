@@ -35,16 +35,23 @@ border-radius: 10px;
 margin: 20px;
 }
 #card-body {
+background-color:white;
 display: flex;
 align-items: center;
 max-width: 100%;
 text-align: left;
 padding: 30px 0 0 0;
 margin: 32px 0;
+}   
+.card-text{
+color:white;
+background-color:rgb(46, 120, 230);
+font-size: 18px;
+font-weight: 500;
 }
 .text-content {
 flex: 1;
-background: -webkit-linear-gradient(right, #7cf305, #830606);
+background: rgb(46, 120, 230);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 font-size: 18px;
