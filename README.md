@@ -1,4 +1,4 @@
-![view-project-gif](https://github.com/user-attachments/assets/6019570b-257a-4f52-910a-989316caec08)# Hyper Coders 🚀
+# Hyper Coders 🚀
 <img src="https://img.shields.io/badge/License_-Creative Commons v1.0%20License-blue"> <img src="https://img.shields.io/badge/Script_-html & css-green">
 
 Welcome to Hyper Coders 🎉
