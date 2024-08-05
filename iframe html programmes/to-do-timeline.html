@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Dynamic Timeline</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#myInput {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.addBtn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.addBtn:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+li.checked {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #cce5ff; /* Completed tasks background color */
+}
+
+li:not(.checked) {
+    background-color: #f8d7da; /* Incomplete tasks background color */
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Timeline styles */
+.timeline {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px;
+    border-left: 2px solid #4CAF50;
+    position: relative;
+}
+
+.timeline h2 {
+    text-align: center;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.timeline-item:nth-child(odd) {
+    background-color: #e9f5e9;
+}
+
+.timeline-content {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid #4CAF50;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+}
+
+.date {
+    display: block;
+    font-size: 0.9em;
+    color: #777;
+}
+
+    </style>
+</head>
+<body>
+    <div id="myDIV" class="header">
+        <h2 style="margin:5px"><span style="color:black">To-Do</span></h2>
+        <span><input type="text" id="myInput" placeholder="Entry..."></span>
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    <ul id="myUL">
+        <li class="checked">Pay cable line network distributor</li>
+        <li>Meet Rishi for finances and networking</li>
+        <li>Organize distributor warehouse lines</li>
+        <li>Organize office/cabin</li>
+    </ul>
+
+    <div class="timeline" id="timeline">
+        <h2>Timeline</h2>
+        <!-- Timeline items will be appended here dynamically -->
+        <!-- Its working live as per to do list done by using script -->
+    </div>
+
+    <script>
+
+        function createCloseButton() {
+            var close = document.createElement("SPAN");
+            close.className = "close";
+            close.textContent = "\u00D7";
+            close.onclick = function() {
+                var li = this.parentElement;
+                li.remove();
+                updateTimeline();
+            };
+            return close;
+        }
+
+        function addTaskToTimeline(task, index) {
+            var timeline = document.getElementById("timeline");
+            var timelineItem = document.createElement("DIV");
+            timelineItem.className = "timeline-item";
+            timelineItem.dataset.index = index;
+
+            var timelineContent = document.createElement("DIV");
+            timelineContent.className = "timeline-content";
+
+            var taskHeader = document.createElement("H3");
+            taskHeader.textContent = `Task ${index + 1}`;
+
+            var taskDescription = document.createElement("P");
+            taskDescription.textContent = task;
+
+            var dateSpan = document.createElement("SPAN");
+            dateSpan.className = "date";
+            dateSpan.textContent = new Date().toLocaleDateString();
+
+            timelineContent.appendChild(taskHeader);
+            timelineContent.appendChild(taskDescription);
+            timelineContent.appendChild(dateSpan);
+
+            timelineItem.appendChild(timelineContent);
+            timeline.appendChild(timelineItem);
+        }
+
+        function updateTimeline() {
+            var timeline = document.getElementById("timeline");
+            timeline.innerHTML = "";
+            var tasks = document.querySelectorAll("#myUL li");
+            tasks.forEach((task, index) => {
+                if (task.textContent.trim() !== '') {
+                    addTaskToTimeline(task.textContent, index);
+                }
+            });
+        }
+
+       
+        document.querySelector('ul').addEventListener('click', function(ev) {
+            if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+                updateTimeline();
+            }
+        }, false);
+
+  
+        function newElement() {
+            var inputValue = document.getElementById("myInput").value;
+            if (inputValue === '') {
+                alert("You must write something!");
+                return;
+            }
+
+            var li = document.createElement("LI");
+            li.appendChild(document.createTextNode(inputValue));
+            li.appendChild(createCloseButton());
+            document.getElementById("myUL").appendChild(li);
+            document.getElementById("myInput").value = "";
+
+            updateTimeline();
+        }
+
+        // Initialize the timeline
+        updateTimeline();
+    </script>
+</body>
+</html>

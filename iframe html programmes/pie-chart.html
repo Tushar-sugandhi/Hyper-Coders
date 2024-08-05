@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body{
+            padding: 50px;
+            padding-bottom: 0%;
+            padding-top: 10px;
+        }
+        /* Responsive Design */
+    @media (max-width: 768px) {
+        .chat-container {
+            height: 70vh;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .chat-container {
+            height: 60vh;
+        }
+        .input-container input {
+            padding: 8px;
+        }
+        .input-container button {
+            padding: 8px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <section id="data-visualization">
+        <form id="chartForm">
+            <label for="labels">Name</label>
+            <input type="text" id="labels" placeholder="Red, Blue, Yellow, Green, Purple, Orange" required><br><br>
+            <label for="data">Data (comma-separated):</label>
+            <input type="text" id="data" placeholder="12, 19, 16, 5, 2, 3" required><br>
+            <center><button type="submit">Update Chart</button></center>
+        </form>
+
+        <canvas id="myPieChart" width="700" height="400"></canvas>
+    </section>
+
+    <script>
+        const ctx = document.getElementById('myPieChart').getContext('2d');
+        const myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [12, 19, 16, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        document.getElementById('chartForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const labels = document.getElementById('labels').value.split(',').map(label => label.trim());
+            const data = document.getElementById('data').value.split(',').map(value => parseFloat(value.trim()));
+            
+            myPieChart.data.labels = labels;
+            myPieChart.data.datasets[0].data = data;
+
+            // Optionally, update chart colors dynamically if needed
+            myPieChart.data.datasets[0].backgroundColor = labels.map((_, index) => `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.2)`);
+            
+            myPieChart.update();
+        });
+    </script>
+</body>
+</html>
