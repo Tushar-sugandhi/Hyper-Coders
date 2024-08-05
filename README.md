@@ -23,14 +23,20 @@ Hyper Coders is an innovative platform designed to simplify project management a
 
 A huge thank you to our amazing contributors who made this project possible:
 
-    Tushar Sugandhi - [GitHub Profile](https://github.com/tushar-sugandhi)  
+    Tushar Sugandhi - [GitHub Profile] (https://github.com/tushar-sugandhi)  
     Project Lead, Developer, Designer.
 
-    Aneesh Sai Praneeth - [GitHub Profile](https://github.com/4n33sh)  
-    Developer, Backend.
+    Aneesh Sai Praneeth - [GitHub Profile] (https://github.com/4n33sh)  
+    Developer, Backend, Co-Designer.
 
-    [Contributor 2’s Name] - GitHub Profile(https://github.com/Vikassbhat)  
+    Vikas Bhat - [GitHub Profile] (https://github.com/Vikassbhat)  
     Developer, Designer.
+
+## Index Page
+![](https://github.com/Tushar-sugandhi/Hyper-Coders/tree/main/gifs/index-gif.gif)
+
+## Project Page
+![](https://github.com/Tushar-sugandhi/Hyper-Coders/tree/main/gifs/view-project-gif.gif)
 
 ## 📄 License
 
