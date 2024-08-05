@@ -3,9 +3,8 @@
 1. Nav bar
 2. About 
 3. Pop-Up message box / chat box.
-4.
-5. 
-6. Footer
+4. Features
+5. Footer
 */
 
 
@@ -24,11 +23,12 @@ font-size: 36px;
 font-weight: bold;
 font-family: "Noto Color Emoji";
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 20px;
 }
 #about {
 padding: 25px 40px 10px 40px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-font-size: 40px;
+font-size: 20px;
 font-weight: 600;
 background-color: #f9f9f9;
 border-radius: 10px;
@@ -62,24 +62,22 @@ border-radius: 5px;
 }
 
 /* about Pop-up box */
-
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
 .open-button {
   background-color: #433aca;
   color: white;
-  padding: 16px 20px;
+  padding: 0%;
   border: none;
-  opacity: 70%;
+  opacity: 60%;
   cursor: pointer;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 65px;
+  height: 50px;
+  width: 70px;
   z-index: 1;
-  border-radius: 70%;
-  border:2px solid black;
+  border-radius: 100px;
+  box-shadow: 0px 5px 5px #2f1111, 0px -5px 5px #210c0c, 5px 0px 5px #210c0c, -5px 0px 5px #210c0c;
+
 }
 
 .chat-popup {
@@ -132,175 +130,157 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* features css--------------*/
+/* only here comments are added evey part to custumize bcz i was confusing very much */
 #about-head {
-  color:white;
-  background-color:rgb(46, 120, 230);
+  color: white;
+  background-color: rgb(46, 120, 230);
   padding: 10px;
-  font-size: 36px;
+  font-size: 28px; /*  font size */
   font-weight: bold;
   font-family: "Noto Color Emoji";
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 #about {
-  padding: 25px 40px 10px 40px;
+  padding: 20px 30px 10px 30px; /*  padding */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 40px;
+  font-size: 24px; /*  font size */
   font-weight: 600;
   background-color: #f9f9f9;
-  border-radius: 10px;
+  border-radius: 8px; /*  border radius */
   margin: 20px;
 }
+
 .ag-format-container {
-    width: 1142px;
-    margin: 0 auto;
-  }
-  
-  
-  body {
-    background-color: lightblue;
-  }
-  .ag-courses_box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  
-    padding: 50px 0;
-  }
+  width: 100%; /*  width */
+  max-width: 10000px; /* Constrain width */
+  margin: 0 auto;
+}
+
+.ag-courses_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /*  gap between cards */
+  padding-right: 20px; /* padding */
+  padding-top: 20px;
+}
+
+.ag-courses_item {
+  flex-basis: calc(25% - 10px); /* Adjusted to fit items that is boxes per row */
+  margin: 0 30px 0px; /*  margins */
+  border-radius: 16px; /* border radius */
+  overflow: hidden;
+}
+
+.ag-courses-item_link {
+  display: block;
+  padding: 20px 10px; /* padding */
+  background-color: #121212;
+  overflow: hidden;
+  position: relative;
+}
+
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  transform: scale(6); /* scale on hover */
+}
+
+.ag-courses-item_title {
+  min-height: 60px; /*  minimum height */
+  margin: 0 0 15px; /*margin */
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 20px; /* font size */
+  color: #FFF;
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_date-box {
+  font-size: 16px; /*  font size */
+  color: #FFF;
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_date {
+  font-weight: bold;
+  color: #f9b234;
+  transition: color .5s ease;
+}
+
+.ag-courses-item_bg {  
+  /* this is for upper hover */
+  height: 100px; /* height */
+  width: 200px; /*  width */
+  background-color: #f9b234;
+  z-index: 1;
+  position: absolute;
+  top: -50px; /* position */
+  right: -50px; /* position */
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: #3ecd5e;
+}
+
+.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+  background-color: #e44002;
+}
+
+.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+  background-color: #952aff;
+}
+
+.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+  background-color: #cd3e94;
+}
+
+.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+  background-color: #4c49ea;
+}
+
+@media only screen and (max-width: 979px) {
   .ag-courses_item {
-    -ms-flex-preferred-size: calc(33.33333% - 30px);
-    flex-basis: calc(33.33333% - 30px);
-  
-    margin: 0 15px 30px;
-  
-    overflow: hidden;
-  
-    border-radius: 28px;
-  }
-  .ag-courses-item_link {
-    display: block;
-    padding: 30px 20px;
-    background-color: #121212;
-  
-    overflow: hidden;
-  
-    position: relative;
-  }
-  .ag-courses-item_link:hover,
-  .ag-courses-item_link:hover .ag-courses-item_date {
-    text-decoration: none;
-    color: #FFF;
-  }
-  .ag-courses-item_link:hover .ag-courses-item_bg {
-    -webkit-transform: scale(10);
-    -ms-transform: scale(10);
-    transform: scale(10);
+    flex-basis: calc(50% - 10px); /* Two items per row */
   }
   .ag-courses-item_title {
-    min-height: 87px;
-    margin: 0 0 25px;
-  
-    overflow: hidden;
-  
-    font-weight: bold;
-    font-size: 30px;
-    color: #FFF;
-  
-    z-index: 2;
-    position: relative;
+    font-size: 18px; /* Smaller font size */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .ag-courses_item {
+    flex-basis: 100%; /* Full width on small screens */
+  }
+  .ag-courses-item_title {
+    min-height: 60px;
+    line-height: 1;
+    font-size: 18px; /* Smaller font size */
+  }
+  .ag-courses-item_link {
+    padding: 15px 20px; /* Reduced padding */
   }
   .ag-courses-item_date-box {
-    font-size: 18px;
-    color: #FFF;
-  
-    z-index: 2;
-    position: relative;
+    font-size: 14px; /* Smaller font size */
   }
-  .ag-courses-item_date {
-    font-weight: bold;
-    color: #f9b234;
-  
-    -webkit-transition: color .5s ease;
-    -o-transition: color .5s ease;
-    transition: color .5s ease
-  }
-  .ag-courses-item_bg {
-    height: 128px;
-    width: 128px;
-    background-color: #f9b234;
-  
-    z-index: 1;
-    position: absolute;
-    top: -75px;
-    right: -75px;
-  
-    border-radius: 50%;
-  
-    -webkit-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
-    background-color: #3ecd5e;
-  }
-  .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
-    background-color: #e44002;
-  }
-  .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
-    background-color: #952aff;
-  }
-  .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
-    background-color: #cd3e94;
-  }
-  .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
-    background-color: #4c49ea;
-  }
-  
-  
-  
-  @media only screen and (max-width: 979px) {
-    .ag-courses_item {
-      -ms-flex-preferred-size: calc(50% - 30px);
-      flex-basis: calc(50% - 30px);
-    }
-    .ag-courses-item_title {
-      font-size: 24px;
-    }
-  }
-  
-  @media only screen and (max-width: 767px) {
-    .ag-format-container {
-      width: 96%;
-    }
-  
-  }
-  @media only screen and (max-width: 639px) {
-    .ag-courses_item {
-      -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-    }
-    .ag-courses-item_title {
-      min-height: 72px;
-      line-height: 1;
-  
-      font-size: 24px;
-    }
-    .ag-courses-item_link {
-      padding: 22px 40px;
-    }
-    .ag-courses-item_date-box {
-      font-size: 16px;
-    }
-  }
-
-/* Footer CSS */
-body {
-  background: #fbfbfd;
 }
+
+/* Footer CSS---------- */
+
 .new_footer_area {
   background: #fbfbfd;
 }
